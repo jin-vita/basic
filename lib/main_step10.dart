@@ -1,5 +1,4 @@
 // 모듈 가져오기
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -43,10 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // 스캐폴드(화면의 기본 구조를 잡아주는 것)를 반환한다.
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('메인 화면'),
-      ),
-      body: Column(
+        appBar: AppBar(
+          title: const Text('메인 화면'),
+        ),
+        body: Column(
           children: [
             Expanded(
               flex: 1,
@@ -54,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.blue,
               ),
             ),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 80,
               child: Row(
@@ -63,32 +62,29 @@ class _MyHomePageState extends State<MyHomePage> {
                   ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueAccent,
-                        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                        textStyle: const TextStyle(
+                          backgroundColor: Colors.blueAccent,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 50, vertical: 20),
+                          textStyle: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
-                        )
-                      ),
-                      child: const Text("확인")
-                  ),
+                          )),
+                      child: const Text("확인")),
                   ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blueAccent,
-                          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 50, vertical: 20),
                           textStyle: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
-                          )
-                      ),
-                      child: const Text("취소")
-                  ),
+                          )),
+                      child: const Text("취소")),
                 ],
               ),
             ),
           ],
-      )
-    );
+        ));
   }
 }

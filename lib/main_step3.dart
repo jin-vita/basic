@@ -54,13 +54,11 @@ class _MyHomePageState extends State<MyHomePage> {
           alignment: Alignment.centerLeft,
           padding: const EdgeInsets.only(left: 30.0),
           margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-          child: const Text(
-            '안녕!',
-            style: TextStyle(
-              color: Colors.cyan,
-              fontSize: 30.0,
-            )
-          ),
+          child: const Text('안녕!',
+              style: TextStyle(
+                color: Colors.cyan,
+                fontSize: 30.0,
+              )),
         ),
       ),
     );

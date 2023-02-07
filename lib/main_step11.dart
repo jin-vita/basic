@@ -1,5 +1,4 @@
 // 모듈 가져오기
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -48,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: 80,
             child: Row(
@@ -60,75 +59,59 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blueAccent,
-                        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 20),
                         textStyle: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                        )
-                    ),
-                    child: const Text("첫번째")
-                ),
+                        )),
+                    child: const Text("첫번째")),
                 ElevatedButton(
                     onPressed: () {
                       changeScreen(1);
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blueAccent,
-                        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 20),
                         textStyle: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                        )
-                    ),
-                    child: const Text("두번째")
-                ),
+                        )),
+                    child: const Text("두번째")),
                 ElevatedButton(
                     onPressed: () {
                       changeScreen(2);
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blueAccent,
-                        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 20),
                         textStyle: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                        )
-                    ),
-                    child: const Text("세번째")
-                ),
+                        )),
+                    child: const Text("세번째")),
               ],
             ),
           ),
           Container(
               child: Stack(
-                children: [
-                  Visibility(
-                    visible: (index == 0) ? true : false,
-                    child: Container(
-                        width: 300,
-                        height: 300,
-                        color: Colors.blue
-                    ),
-                  ),
-                  Visibility(
-                    visible: (index == 1) ? true : false,
-                    child: Container(
-                        width: 300,
-                        height: 300,
-                        color: Colors.red
-                    ),
-                  ),
-                  Visibility(
-                      visible: (index == 2) ? true : false,
-                      child: Container(
-                          width: 300,
-                          height: 300,
-                          color: Colors.purple
-                      )
-                  ),
-                ],
-              )
-          ),
+            children: [
+              Visibility(
+                visible: (index == 0) ? true : false,
+                child: Container(width: 300, height: 300, color: Colors.blue),
+              ),
+              Visibility(
+                visible: (index == 1) ? true : false,
+                child: Container(width: 300, height: 300, color: Colors.red),
+              ),
+              Visibility(
+                  visible: (index == 2) ? true : false,
+                  child:
+                      Container(width: 300, height: 300, color: Colors.purple)),
+            ],
+          )),
         ],
       ),
     );
@@ -139,5 +122,4 @@ class _MyHomePageState extends State<MyHomePage> {
       this.index = index;
     });
   }
-
 }

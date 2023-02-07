@@ -1,5 +1,4 @@
 // 모듈 가져오기
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -43,67 +42,57 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // 스캐폴드(화면의 기본 구조를 잡아주는 것)를 반환한다.
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('메인 화면'),
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            flex: 1,
-            child: Container(
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          border: Border.all(
-                              color: Colors.orange,
-                              width: 2
-                          )
-                      ),
-                      child: const Text(
-                        "안녕",
-                      ),
-                    ),
-                  ),
-                  Expanded(
+        appBar: AppBar(
+          title: const Text('메인 화면'),
+        ),
+        body: Column(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Container(
+                child: Row(
+                  children: [
+                    Expanded(
                       flex: 1,
                       child: Container(
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             color: Colors.blue,
-                            border: Border.all(
-                                color: Colors.orange,
-                                width: 2
-                            )
-                        ),
+                            border: Border.all(color: Colors.orange, width: 2)),
                         child: const Text(
                           "안녕",
                         ),
-                      )
-                  ),
-
-                ],
+                      ),
+                    ),
+                    Expanded(
+                        flex: 1,
+                        child: Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: Colors.blue,
+                              border:
+                                  Border.all(color: Colors.orange, width: 2)),
+                          child: const Text(
+                            "안녕",
+                          ),
+                        )),
+                  ],
+                ),
               ),
             ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              color: Colors.cyan,
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.cyan,
+              ),
             ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              color: Colors.green,
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.green,
+              ),
             ),
-          ),
-        ],
-      )
-    );
+          ],
+        ));
   }
 }

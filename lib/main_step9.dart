@@ -1,5 +1,4 @@
 // 모듈 가져오기
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -43,63 +42,49 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // 스캐폴드(화면의 기본 구조를 잡아주는 것)를 반환한다.
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('메인 화면'),
-      ),
-      body: Container(
-        height: 400,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              width: 100,
-              height: 100,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  border: Border.all(
-                      color: Colors.orange,
-                      width: 2
-                  )
-              ),
-              child: const Text(
-                "안녕",
-              ),
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  border: Border.all(
-                      color: Colors.orange,
-                      width: 2
-                  )
-              ),
-              child: const Text(
-                "안녕",
-              ),
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  border: Border.all(
-                      color: Colors.orange,
-                      width: 2
-                  )
-              ),
-              child: const Text(
-                "안녕",
-              ),
-            ),
-          ],
-        )
-      )
-    );
+        appBar: AppBar(
+          title: const Text('메인 화면'),
+        ),
+        body: SizedBox(
+            height: 400,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      border: Border.all(color: Colors.orange, width: 2)),
+                  child: const Text(
+                    "안녕",
+                  ),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      border: Border.all(color: Colors.orange, width: 2)),
+                  child: const Text(
+                    "안녕",
+                  ),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      border: Border.all(color: Colors.orange, width: 2)),
+                  child: const Text(
+                    "안녕",
+                  ),
+                ),
+              ],
+            )));
   }
 }

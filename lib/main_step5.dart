@@ -51,64 +51,54 @@ class _MyHomePageState extends State<MyHomePage> {
         // 여러 개의 자식 위젯을 가질 수 있는 것 (세로 방향)
         child: ScrollConfiguration(
           behavior: ScrollConfiguration.of(context).copyWith(
-            dragDevices: {
-              PointerDeviceKind.touch,
-              PointerDeviceKind.mouse
-            }
-          ),
+              dragDevices: {PointerDeviceKind.touch, PointerDeviceKind.mouse}),
           child: SingleChildScrollView(
-            child: Column(
-                children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    color: Colors.red,
-                    alignment: Alignment.centerLeft,
-                    padding: const EdgeInsets.only(left: 30.0),
-                    margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-                    child: const Text(
-                        '안녕 1',
-                        style: TextStyle(
-                          color: Colors.cyan,
-                          fontSize: 30.0,
-                        )
-                    ),
-                  ),
-                  Container(
-                    width: 200,
-                    height: 200,
-                    color: Colors.red,
-                    alignment: Alignment.centerLeft,
-                    padding: const EdgeInsets.only(left: 30.0),
-                    margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-                    child: const Text(
-                        '안녕 2',
-                        style: TextStyle(
-                          color: Colors.cyan,
-                          fontSize: 30.0,
-                        )
-                    ),
-                  ),
-                  Container(
-                    width: 200,
-                    height: 200,
-                    color: Colors.red,
-                    alignment: Alignment.centerLeft,
-                    padding: const EdgeInsets.only(left: 30.0),
-                    margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-                    child: const Text(
-                        '안녕 3',
-                        style: TextStyle(
-                          color: Colors.cyan,
-                          fontSize: 30.0,
-                        )
-                    ),
-                  ),
-                ]
-            ),
+            child: Column(children: [
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.red,
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(left: 30.0),
+                margin: const EdgeInsets.symmetric(
+                    horizontal: 30.0, vertical: 20.0),
+                child: const Text('안녕 1',
+                    style: TextStyle(
+                      color: Colors.cyan,
+                      fontSize: 30.0,
+                    )),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.red,
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(left: 30.0),
+                margin: const EdgeInsets.symmetric(
+                    horizontal: 30.0, vertical: 20.0),
+                child: const Text('안녕 2',
+                    style: TextStyle(
+                      color: Colors.cyan,
+                      fontSize: 30.0,
+                    )),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.red,
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(left: 30.0),
+                margin: const EdgeInsets.symmetric(
+                    horizontal: 30.0, vertical: 20.0),
+                child: const Text('안녕 3',
+                    style: TextStyle(
+                      color: Colors.cyan,
+                      fontSize: 30.0,
+                    )),
+              ),
+            ]),
           ),
         ),
-
       ),
     );
   }

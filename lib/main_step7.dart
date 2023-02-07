@@ -1,5 +1,4 @@
 // 모듈 가져오기
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -56,35 +55,25 @@ class _MyHomePageState extends State<MyHomePage> {
               alignment: Alignment.center,
               decoration: BoxDecoration(
                   color: Colors.blue,
-                  border: Border.all(
-                      color: Colors.orange,
-                      width: 2
-                  )
-              ),
+                  border: Border.all(color: Colors.orange, width: 2)),
               child: const Text(
                 "안녕",
               ),
             ),
           ),
           Expanded(
-            flex: 2,
-            child: Container(
-              width: 100,
-              height: 100,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  border: Border.all(
-                      color: Colors.orange,
-                      width: 2
-                  )
-              ),
-              child: const Text(
-                "안녕",
-              ),
-            )
-          ),
-
+              flex: 2,
+              child: Container(
+                width: 100,
+                height: 100,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    border: Border.all(color: Colors.orange, width: 2)),
+                child: const Text(
+                  "안녕",
+                ),
+              )),
         ],
       ),
     );

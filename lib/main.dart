@@ -49,38 +49,35 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: [
           Card(
-            margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: ListTile(
-              leading: Icon(Icons.access_alarm, color:Colors.purple),
-              title: Column(
-                children: [
-                  Container(
-                    height: 100,
-                    color: Colors.blue,
-                    child: Image.asset('assets/images/car1.png'),
-                  ),
-                  Text("인사말이예요.")
-                ],
-              ),
-              trailing: Text("홍길동1"),
-            )
-          ),
-          Card(
+              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: ListTile(
+                leading: const Icon(Icons.access_alarm, color: Colors.purple),
+                title: Column(
+                  children: [
+                    Container(
+                      height: 100,
+                      color: Colors.blue,
+                      child: Image.asset('assets/images/car1.png'),
+                    ),
+                    const Text("인사말이예요.")
+                  ],
+                ),
+                trailing: const Text("홍길동1"),
+              )),
+          const Card(
               margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               child: ListTile(
-                leading: Icon(Icons.access_alarm, color:Colors.purple),
+                leading: Icon(Icons.access_alarm, color: Colors.purple),
                 title: Text("안녕"),
                 trailing: Text("홍길동2"),
-              )
-          ),
-          Card(
+              )),
+          const Card(
               margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               child: ListTile(
-                leading: Icon(Icons.access_alarm, color:Colors.purple),
+                leading: Icon(Icons.access_alarm, color: Colors.purple),
                 title: Text("안녕"),
                 trailing: Text("홍길동3"),
-              )
-          )
+              ))
         ],
       ),
     );
@@ -91,5 +88,4 @@ class _MyHomePageState extends State<MyHomePage> {
       this.index = index;
     });
   }
-
 }

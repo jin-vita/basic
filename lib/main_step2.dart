@@ -52,13 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.red,
           alignment: Alignment.centerLeft,
           padding: const EdgeInsets.only(left: 30.0),
-          child: const Text(
-            '안녕!',
-            style: TextStyle(
-              color: Colors.cyan,
-              fontSize: 30.0,
-            )
-          ),
+          child: const Text('안녕!',
+              style: TextStyle(
+                color: Colors.cyan,
+                fontSize: 30.0,
+              )),
         ),
       ),
     );
