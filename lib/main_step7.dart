@@ -37,7 +37,7 @@ class MyHomePage extends StatefulWidget {
 
 // 속성(변수)을 가질 수 있는 클래스를 정의한다.
 class _MyHomePageState extends State<MyHomePage> {
-  var index = 0;
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -46,50 +46,47 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text('메인 화면'),
       ),
-      body: ListView(
+      body: Row(
         children: [
-          Card(
-            margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: ListTile(
-              leading: Icon(Icons.access_alarm, color:Colors.purple),
-              title: Column(
-                children: [
-                  Container(
-                    height: 100,
-                    color: Colors.blue,
-                    child: Image.asset('assets/images/car1.png'),
-                  ),
-                  Text("인사말이예요.")
-                ],
+          Expanded(
+            flex: 1,
+            child: Container(
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: Colors.blue,
+                  border: Border.all(
+                      color: Colors.orange,
+                      width: 2
+                  )
               ),
-              trailing: Text("홍길동1"),
+              child: const Text(
+                "안녕",
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: Colors.blue,
+                  border: Border.all(
+                      color: Colors.orange,
+                      width: 2
+                  )
+              ),
+              child: const Text(
+                "안녕",
+              ),
             )
           ),
-          Card(
-              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: ListTile(
-                leading: Icon(Icons.access_alarm, color:Colors.purple),
-                title: Text("안녕"),
-                trailing: Text("홍길동2"),
-              )
-          ),
-          Card(
-              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: ListTile(
-                leading: Icon(Icons.access_alarm, color:Colors.purple),
-                title: Text("안녕"),
-                trailing: Text("홍길동3"),
-              )
-          )
+
         ],
       ),
     );
   }
-
-  void changeScreen(int index) {
-    setState(() {
-      this.index = index;
-    });
-  }
-
 }
