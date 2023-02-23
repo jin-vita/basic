@@ -96,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Container(
+            color: Colors.white,
               child: Stack(
             children: [
               Visibility(
